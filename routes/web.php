@@ -124,3 +124,8 @@ Route::resource('photos', PhotoController::class)->except([
     'create', 'store', 'update', 'destroy' 
 ]); 
 // Ini berarti semua rute kecuali create, store, update, dan destroy akan di-generate. Jadi, hanya metode index, show, dan edit yang akan memiliki rute yang terkait.
+
+// Route::get('/greeting', function () { 
+//     return view('blog.hello', ['name' => 'Avicenna Mumtaza']); 
+// }); 
+Route::get('/greeting', [WelcomeController::class, 'greeting']);
